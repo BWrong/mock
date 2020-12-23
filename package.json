@@ -14,7 +14,9 @@
     "build": "webpack --mode=production",
     "test:watch": "nodemon ./tests/index.js",
     "test": "node ./tests/index.js",
-    "pub": "npm run build && npm publish --access public"
+    "pub": "npm run build && npm publish --access public",
+    "commit": "git add . && git-cz",
+    "release": "standard-version --infile docs/CHANGELOG.md"
   },
   "homepage": "https://github.com/BWrong/mock.git",
   "bugs": {
@@ -37,8 +39,20 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "babel-loader": "^8.2.2",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^4.3.6",
     "webpack": "^5.10.3",
-    "webpack-cli": "^4.2.0"
+    "webpack-cli": "^4.2.0",
+    "standard-version": "^9.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "commit": false
+    }
   }
 }
