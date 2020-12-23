@@ -1,6 +1,6 @@
 {
   "name": "@bwrong/mock",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "bwrong<ibwrong@foxmail.com>",
   "license": "MIT",
   "keywords": [
@@ -16,7 +16,7 @@
     "test": "node ./tests/index.js",
     "pub": "npm run build && npm publish --access public",
     "commit": "git add . && git-cz",
-    "release": "standard-version --infile docs/CHANGELOG.md"
+    "release": "standard-version --infile CHANGELOG.md"
   },
   "homepage": "https://github.com/BWrong/mock.git",
   "bugs": {
