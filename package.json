@@ -1,29 +1,38 @@
 {
-  "name": "@bwrong/auth-tool",
-  "version": "1.1.2",
+  "name": "@bwrong/mock",
+  "version": "0.0.1",
   "author": "bwrong<ibwrong@foxmail.com>",
   "license": "MIT",
   "keywords": [
-    "auth",
-    "vue"
+    "mock",
+    "webpack"
   ],
-  "description": "vue项目资源（菜单、路由、按钮...）权限控制解决方案",
+  "description": "超简单的前端数据mock方案",
   "main": "dist/index.js",
   "typings": "index.d.ts",
   "scripts": {
     "build": "webpack --mode=production",
+    "test:watch": "nodemon ./tests/index.js",
+    "test": "node ./tests/index.js",
     "pub": "npm run build && npm publish --access public"
   },
-  "homepage": "https://github.com/BWrong/auth-tool.git",
+  "homepage": "https://github.com/BWrong/mock.git",
   "bugs": {
-    "url": "https://github.com/BWrong/auth-tool.git/issues",
+    "url": "https://github.com/BWrong/mock.git/issues",
     "email": "ibwrong@foxmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BWrong/auth-tool.git"
+    "url": "https://github.com/BWrong/mock.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.0",
+    "chokidar": "^3.4.3",
+    "glob": "^7.1.6",
+    "mockjs": "^1.1.0",
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
