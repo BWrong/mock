@@ -1,6 +1,6 @@
 {
   "name": "@bwrong/mock",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "bwrong<ibwrong@foxmail.com>",
   "license": "MIT",
   "keywords": [
@@ -8,15 +8,14 @@
     "webpack"
   ],
   "description": "简单实用的前端数据mock方案",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "build": "webpack --mode=production",
     "test:watch": "nodemon ./tests/index.js",
     "test": "node ./tests/index.js",
     "pub": "npm publish --access public",
     "commit": "git add . && git-cz",
-    "release": "npm run build && standard-version --infile CHANGELOG.md"
+    "release": "standard-version --infile CHANGELOG.md"
   },
   "homepage": "https://github.com/BWrong/mock.git",
   "bugs": {
@@ -35,13 +34,8 @@
     "mockjs": "^1.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "babel-loader": "^8.2.2",
     "cz-conventional-changelog": "^3.3.0",
     "express": "^4.17.1",
-    "webpack": "^5.10.3",
-    "webpack-cli": "^4.2.0",
     "standard-version": "^9.0.0"
   },
   "config": {
