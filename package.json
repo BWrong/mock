@@ -1,6 +1,6 @@
 {
   "name": "@bwrong/mock",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "bwrong<ibwrong@foxmail.com>",
   "license": "MIT",
   "keywords": [
@@ -14,9 +14,9 @@
     "build": "webpack --mode=production",
     "test:watch": "nodemon ./tests/index.js",
     "test": "node ./tests/index.js",
-    "pub": "npm run build && npm publish --access public",
+    "pub": "npm publish --access public",
     "commit": "git add . && git-cz",
-    "release": "standard-version --infile CHANGELOG.md"
+    "release": "npm run build && standard-version --infile CHANGELOG.md"
   },
   "homepage": "https://github.com/BWrong/mock.git",
   "bugs": {
