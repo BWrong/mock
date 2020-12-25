@@ -1,6 +1,6 @@
 {
   "name": "@bwrong/mock",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": "bwrong<ibwrong@foxmail.com>",
   "license": "MIT",
   "keywords": [
@@ -26,7 +26,7 @@
     "type": "git",
     "url": "https://github.com/BWrong/mock.git"
   },
-  "peerDependencies": {
+  "dependencies": {
     "body-parser": "^1.19.0",
     "chalk": "^4.1.0",
     "chokidar": "^3.4.3",
