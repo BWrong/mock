@@ -1,4 +1,9 @@
 # MOCK
+![npm](https://img.shields.io/npm/dt/@bwrong/mock)
+![npm](https://img.shields.io/npm/v/@bwrong/mock)
+![NPM](https://img.shields.io/npm/l/@bwrong/mock)
+![GitHub stars](https://img.shields.io/github/stars/bwrong/mock?style=social)
+
 数据mock工具，可在express和webpack环境下使用。有如下功能：
 - 自动更新：该工具会监听响应mock文件，当文件改动时自动更新mock数据。
 - 延迟响应：可以设置延迟响应时间，应对调试loading的场景。

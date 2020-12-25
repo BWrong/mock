@@ -6,4 +6,4 @@ interface Options{
   headers?: object,
   watchOptions?: object
 }
-export default function mockServer(app:Express,folder:string,options:Options):void
+export default function mockServer(app,folder:string,options:Options):void

@@ -1,3 +1,5 @@
+
+const { setHeaders } = require('./util');
 // OPTIONS请求全部成功
 exports.captureOptionsMW = (req, res, next) => {
   if (req.method.toLocaleUpperCase() === 'OPTIONS') {
