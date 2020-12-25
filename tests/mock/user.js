@@ -1,4 +1,3 @@
-// import { ResponseData } from '../types/responseData';
 const list = {
   code: 0,
   msg: '',
@@ -22,9 +21,9 @@ const info = {
   data: {
     id: '@id',
     name: '@cname',
-    department: '中医内科',
-    jibTitle: '主治医生',
-    org: '互联网门诊',
+    department: 'xxx',
+    jibTitle: 'yyy',
+    org: 'zzzzz',
     count: {
       sum: '@integer(0,10000)',
       score: '@float(0,5,0,2)',
@@ -33,18 +32,10 @@ const info = {
     }
   }
 };
-// module.exports = {
-//   'get|user': list,
-//   'get|user/info': info
-// };
 module.exports = [
   {
     url: '/user',
     response: list
-  },
-  {
-    url: '/user/info',
-    response: info
   },
   {
     url: '/user/html',
@@ -52,14 +43,14 @@ module.exports = [
     headers: {
       'Content-Type': 'text/html'
     },
-    response: '<html><h1>html测试</h1><a href="https://www.baidu.com">百度</a></html>'
+    response: '<html><h1>html测试</h1><a href="https://www.bwrong.com">bwrong</a></html>'
   },
   {
     url: '/user/info/:id',
-    response: (req) => {
-      console.log(req.params)
+    response: (req,res) => {
       return {
-        aaa:345
+        ...info,
+        id: req.params.id
       }
     }
   }

@@ -3,6 +3,7 @@ interface Options{
   delay?: number,
   prefix?: string,
   debug?: boolean,
-  headers?: object
+  headers?: object,
+  watchOptions?: object
 }
-export default function mockServer(app:Express,folder:string,options:Options):any
+export default function mockServer(app:Express,folder:string,options:Options):void
