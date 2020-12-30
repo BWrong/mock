@@ -1,6 +1,6 @@
 {
   "name": "@bwrong/mock",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "author": "bwrong<ibwrong@foxmail.com>",
   "license": "MIT",
   "keywords": [
@@ -16,7 +16,10 @@
   "scripts": {
     "test:w": "nodemon ./tests/index.js",
     "test": "node ./tests/index.js",
-    "pub": "npm publish",
+    "prepare": "install-peers",
+    "prepublish": "nrm use npm",
+    "postpublish": "nrm use taobao",
+    "postinstall": "npm install --peer",
     "commit": "git add . && git-cz",
     "release": "standard-version --infile CHANGELOG.md"
   },
@@ -48,6 +51,7 @@
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
     "express": "^4.17.1",
+    "install-peers-cli": "^2.2.0",
     "standard-version": "^9.0.0"
   },
   "config": {
