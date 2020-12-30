@@ -1,6 +1,6 @@
 {
   "name": "@bwrong/mock",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "bwrong<ibwrong@foxmail.com>",
   "license": "MIT",
   "keywords": [
@@ -19,7 +19,6 @@
     "prepare": "install-peers",
     "prepublish": "nrm use npm",
     "postpublish": "nrm use taobao",
-    "postinstall": "npm install --peer",
     "commit": "git add . && git-cz",
     "release": "standard-version --infile CHANGELOG.md"
   },
@@ -40,7 +39,7 @@
     "src/*",
     "index.d.ts"
   ],
-  "peerDependencies": {
+  "dependencies": {
     "body-parser": "^1.19.0",
     "chalk": "^4.1.0",
     "chokidar": "^3.4.3",
