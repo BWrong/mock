@@ -1,3 +1,4 @@
+let permissions = require('./permissions.json')
 const login = ({ body }) => {
   // console.log('body.username', body.username)
   if (body.username!=='admin') {
@@ -15,7 +16,7 @@ const login = ({ body }) => {
         access_token: '1111111111111111111111',
         refresh_token: '22222222222222222222',
         username: body.username,
-        permissions: require('./permissions.json'),
+        permissions,
         token: '@guid',
         refresh_token: '@guid',
         expires_in: 100000,

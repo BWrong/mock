@@ -8,17 +8,16 @@
     "webpack",
     "express"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "简单实用的前端数据mock方案",
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
-  "typings": "index.d.ts",
+  "main": "src/index.js",
   "scripts": {
-    "test:watch": "nodemon ./tests/index.js",
+    "test:w": "nodemon ./tests/index.js",
     "test": "node ./tests/index.js",
-    "build2": "rollup -c",
-    "pub": "npm run build && npm publish --access public",
+    "pub": "npm publish",
     "commit": "git add . && git-cz",
-    "prepublishOnly": "npm run build",
     "release": "standard-version --infile CHANGELOG.md"
   },
   "homepage": "https://github.com/BWrong/mock.git",
@@ -38,7 +37,7 @@
     "src/*",
     "index.d.ts"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "body-parser": "^1.19.0",
     "chalk": "^4.1.0",
     "chokidar": "^3.4.3",
@@ -47,15 +46,8 @@
     "path-to-regexp": "^6.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "@rollup/plugin-babel": "^5.2.2",
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-node-resolve": "^11.0.1",
     "cz-conventional-changelog": "^3.3.0",
     "express": "^4.17.1",
-    "rollup": "^2.35.1",
-    "rollup-plugin-terser": "^7.0.2",
     "standard-version": "^9.0.0"
   },
   "config": {

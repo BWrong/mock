@@ -22,10 +22,12 @@ exports.genarMockData = (watchFiles = [], prefix) => {
   watchFiles.map((file) => {
     let fileData = require(file) || [];
     fileData.map((item) => {
-      let url = item.url?.trim()?.toLowerCase() || '';
+      let url = item.url || '';
+      url = url.trim().toLowerCase();
       url = url.replace(/^\//, '');
       url = `${prefix}/${url}`;
-      let method = item.method?.trim()?.toUpperCase() || 'GET';
+      let method = item.method || 'GET';
+      method = method.trim().toUpperCase();
       mockData[url] = {
         ...item,
         url,
