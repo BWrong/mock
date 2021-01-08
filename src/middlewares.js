@@ -1,4 +1,3 @@
-
 const { setHeaders } = require('./util');
 // OPTIONS请求全部成功
 exports.captureOptionsMW = (req, res, next) => {
@@ -12,7 +11,7 @@ exports.setHeadersMW = (headers) => {
   return (req, res, next) => {
     let globalHeaders = {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, GET, PATCH, OPTIONS, PUT, DELETE',
+      'Access-Control-Allow-Methods': 'POST, GET, PATCH, OPTIONS, PUT, DELETE, HEAD,CONNECT,TRACE',
       'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With,' + (req.header('access-control-request-headers') || ''),
       'Access-Control-Allow-Credentials': 'true',
       ...headers

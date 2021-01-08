@@ -18,7 +18,7 @@ exports.getWatchFiles = (mockFolder, pattern) => {
  * @param {*} prefix
  */
 exports.genarMockData = (watchFiles = [], prefix) => {
-  let mockData = {};
+  let mockData = [];
   watchFiles.map((file) => {
     let fileData = require(file) || [];
     fileData.map((item) => {
@@ -28,11 +28,11 @@ exports.genarMockData = (watchFiles = [], prefix) => {
       url = `${prefix}/${url}`;
       let method = item.method || 'GET';
       method = method.trim().toUpperCase();
-      mockData[url] = {
+      mockData.push({
         ...item,
         url,
         method
-      };
+      });
     });
   });
   return mockData;

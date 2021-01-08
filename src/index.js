@@ -31,7 +31,7 @@ module.exports = (app, mockFolder, options) => {
       setHeadersMW(headers)
     ],
     async (req, res, next) => {
-      const mocker = Object.values(mockData).find((mockItem) => req.method === mockItem.method && pathToRegexp(mockItem.url).exec(req.path));
+      const mocker = mockData.find((mockItem) => req.method === mockItem.method && pathToRegexp(mockItem.url).exec(req.path));
       if (mocker) {
         req.params = pathMatch({ sensitive: false, strict: false, end: false })(mocker.url)(URL.parse(req.url).pathname);
         let resData = getMockData(mocker.response, req, res);
